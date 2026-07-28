@@ -68,9 +68,30 @@ var icon = document.getElementById("icon");
 darkwhite.onclick = function () {
     document.documentElement.classList.toggle("light");
 
-     if (document.documentElement.classList.contains("light")) {
+    if (document.documentElement.classList.contains("light")) {
         icon.className = "fa-solid fa-moon";
     } else {
         icon.className = "fa-solid fa-sun";
     }
 };
+
+
+
+// function myopj(){
+//     this.names = []
+//     this.add = (name)=>{this.names.push(name)}
+//     this.show= _ =>{
+//         for(var i = 0 ; i < this.names.length ; i++)
+//         {
+//             console.log(this.names[i])
+//         }
+//     }
+
+
+// }
+
+
+// let x = new myopj
+// x.add("mina")
+// x.add("gerges")
+// x.show()
