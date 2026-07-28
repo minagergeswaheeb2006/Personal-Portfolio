@@ -3,7 +3,7 @@ slider.innerHTML += slider.innerHTML;
 slider.innerHTML += slider.innerHTML;
 slider.innerHTML += slider.innerHTML;
 let position = 0;
-const speed = 1;
+const speed = 0.6;
 
 let pause = false;
 
@@ -59,3 +59,18 @@ window.addEventListener("mousemove", (e) => {
     slider.style.transform = `translateX(${position}px)`;
 
 });
+
+
+
+var darkwhite = document.getElementById("toggle");
+var icon = document.getElementById("icon");
+
+darkwhite.onclick = function () {
+    document.documentElement.classList.toggle("light");
+
+     if (document.documentElement.classList.contains("light")) {
+        icon.className = "fa-solid fa-moon";
+    } else {
+        icon.className = "fa-solid fa-sun";
+    }
+};
