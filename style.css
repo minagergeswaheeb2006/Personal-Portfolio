@@ -6,6 +6,7 @@ body {
     margin: 0;
     background: var(--body-bg);
     color: var(--text);
+    user-select: none;
 }
 
 :root {
@@ -115,6 +116,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: animi 3s forwards;
+
 }
 
 nav {
@@ -127,7 +130,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 
     z-index: 1000;
 }
@@ -175,7 +178,6 @@ nav {
     padding: 3px 3px;
     border-radius: 20px;
 }
-
 .dark-mood-button {
     margin-right: 30px;
 
@@ -196,8 +198,6 @@ nav {
 #icon {
     transition: 0.3s;
 }
-
-
 /*  1st step */
 
 
@@ -288,8 +288,6 @@ nav {
 .main-carer-info-intro h1 {
     color: var(--primary);
     font-family: Courier New, monospace;
-    opacity: 0;
-    animation: animi 2s forwards;
     font-size: clamp(5px, 4vw, 40px);
 
 }
@@ -376,6 +374,8 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: Courier New, monospace;
+    opacity: 0;
+    transition: 0.3s ease;
 
 }
 
@@ -456,11 +456,14 @@ nav {
     align-items: center;
     font-family: Courier New, monospace;
     overflow: hidden;
+    transition: 0.3s ease;
 
 }
 
 .container3 h1 {
     font-family: Courier New, monospace;
+    font-weight: bolder;
+    font-size: clamp(10px, 6vw, 40px);
     color: var(--primary);
 
 }
@@ -475,7 +478,7 @@ nav {
 }
 
 .project-card {
-    min-height: 90%;
+    height: 350px;
     background-color: var(--card-bg);
     color: var(--primary);
     display: flex;
@@ -548,6 +551,7 @@ nav {
     border: 1px solid var(--border);
     backdrop-filter: blur(10px);
     box-sizing: border-box;
+    transition: 0.3s ease;
 }
 
 .About-me{

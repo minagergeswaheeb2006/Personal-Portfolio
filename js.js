@@ -64,34 +64,36 @@ window.addEventListener("mousemove", (e) => {
 
 var darkwhite = document.getElementById("toggle");
 var icon = document.getElementById("icon");
-
+var buttonplace =document.getElementById("button-place")
 darkwhite.onclick = function () {
     document.documentElement.classList.toggle("light");
-
+    
     if (document.documentElement.classList.contains("light")) {
         icon.className = "fa-solid fa-moon";
+        buttonplace.style="justify-content: flex-start; "
     } else {
         icon.className = "fa-solid fa-sun";
     }
 };
 
+var cont2 = document.getElementById("cont2");
+var cont3 = document.getElementById("cont3");
+var cont4 = document.getElementById("cont4");
 
-
-// function myopj(){
-//     this.names = []
-//     this.add = (name)=>{this.names.push(name)}
-//     this.show= _ =>{
-//         for(var i = 0 ; i < this.names.length ; i++)
-//         {
-//             console.log(this.names[i])
-//         }
-//     }
-
-
-// }
-
-
-// let x = new myopj
-// x.add("mina")
-// x.add("gerges")
-// x.show()
+window.onscroll = function () {
+    if (window.scrollY >= cont2.offsetTop - 300) {
+        cont2.style.opacity = "1";
+    } else {
+        cont2.style.opacity = "0";
+    }
+    if (window.scrollY >= cont3.offsetTop - 300) {
+        cont3.style.opacity = "1";
+    } else {
+        cont3.style.opacity = "0";
+    }
+    if (window.scrollY >= cont4.offsetTop - 550) {
+        cont4.style.opacity = "1";
+    } else {
+        cont4.style.opacity = "0";
+    }
+}
