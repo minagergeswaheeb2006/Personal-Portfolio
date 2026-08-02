@@ -66,9 +66,9 @@ var darkwhite = document.getElementById("toggle");
 var icon = document.getElementById("icon");
 var buttonplace =document.getElementById("button-place")
 darkwhite.onclick = function () {
-    document.documentElement.classList.toggle("light");
+    document.documentElement.classList.toggle("dark");
     
-    if (document.documentElement.classList.contains("light")) {
+    if (document.documentElement.classList.contains("dark")) {
         icon.className = "fa-solid fa-moon";
         buttonplace.style="justify-content: flex-start; "
     } else {
@@ -95,5 +95,15 @@ window.onscroll = function () {
         cont4.style.opacity = "1";
     } else {
         cont4.style.opacity = "0";
+        
     }
+}
+var loader = document.getElementById("loader")
+var portodisplay = document.getElementById("portodisplay")
+
+window.onload = function(){
+    setInterval(function(){
+        document.getElementById("loader").style.display="none";
+        document.getElementById("portodisplay").classList.remove("all-broject");
+    },3000)
 }
